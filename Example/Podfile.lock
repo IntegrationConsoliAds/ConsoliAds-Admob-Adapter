@@ -1,0 +1,16 @@
+PODS:
+  - ConsoliAds-Admob-Adapter (0.1.0)
+
+DEPENDENCIES:
+  - ConsoliAds-Admob-Adapter (from `../`)
+
+EXTERNAL SOURCES:
+  ConsoliAds-Admob-Adapter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ConsoliAds-Admob-Adapter: 1b9cbcc51d4617de523db37b84dbd4c83e89971a
+
+PODFILE CHECKSUM: 6b95bbe1ed8989614882685f1387b9e12419025e
+
+COCOAPODS: 1.11.2

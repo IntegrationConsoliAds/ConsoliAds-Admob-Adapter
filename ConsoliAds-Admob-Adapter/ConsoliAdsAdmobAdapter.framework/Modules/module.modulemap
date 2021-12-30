@@ -1,0 +1,14 @@
+framework module AdmobTestFramework {
+  umbrella header "AdmobTestFramework.h"
+
+  export *
+  module * { export * }
+  
+  header "CAAdmobStaticInterstitial.h"
+  header "CAAdmobInterstitial.h"
+  header "CAAdmobAppOpenAd.h"
+  header "CAAdmobBannerAd.h"
+  header "AdmobTestFramework.h"
+  header "CAAdmobRewarded.h"
+  header "CAAdmobNativeAd.h"
+}

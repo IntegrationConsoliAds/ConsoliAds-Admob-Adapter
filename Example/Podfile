@@ -1,0 +1,6 @@
+use_frameworks!
+target 'ConsoliAds-Admob-Adapter_Tests' do
+  pod 'ConsoliAds-Admob-Adapter', :path => '../'
+  
+  
+end
