@@ -38,7 +38,7 @@
 		84DD8AAA790B082EB946E4BF2890AD6A /* Pods-ConsoliAds-Admob-Adapter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ConsoliAds-Admob-Adapter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		84F128D43936947FEB2EFB5341B82CC9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8CCFBE72BF0565D660DD1879BC67B668 /* Pods-ConsoliAds-Admob-Adapter_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ConsoliAds-Admob-Adapter_Tests-Info.plist"; sourceTree = "<group>"; };
-		9185167FEF8EB511A39E98D6E2AEEFEA /* ConsoliAds-Admob-Adapter */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "ConsoliAds-Admob-Adapter"; path = ConsoliAds_Admob_Adapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9185167FEF8EB511A39E98D6E2AEEFEA /* ConsoliAds_Admob_Adapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConsoliAds_Admob_Adapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A36075DCB13DEE9A87911284E79A9E3 /* Pods-ConsoliAds-Admob-Adapter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ConsoliAds-Admob-Adapter_Tests-dummy.m"; sourceTree = "<group>"; };
 		9BDCC5F3FFDAA48994B29DD2DE107964 /* Pods-ConsoliAds-Admob-Adapter_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ConsoliAds-Admob-Adapter_Tests"; path = Pods_ConsoliAds_Admob_Adapter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -162,7 +162,7 @@
 		D5803C04625818E3001378D2B519033B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9185167FEF8EB511A39E98D6E2AEEFEA /* ConsoliAds-Admob-Adapter */,
+				9185167FEF8EB511A39E98D6E2AEEFEA /* ConsoliAds_Admob_Adapter.framework */,
 				9BDCC5F3FFDAA48994B29DD2DE107964 /* Pods-ConsoliAds-Admob-Adapter_Tests */,
 			);
 			name = Products;
@@ -216,7 +216,7 @@
 			);
 			name = "ConsoliAds-Admob-Adapter";
 			productName = ConsoliAds_Admob_Adapter;
-			productReference = 9185167FEF8EB511A39E98D6E2AEEFEA /* ConsoliAds-Admob-Adapter */;
+			productReference = 9185167FEF8EB511A39E98D6E2AEEFEA /* ConsoliAds_Admob_Adapter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B4B944ABAF6255EDC00C8C6B99AED18E /* Pods-ConsoliAds-Admob-Adapter_Tests */ = {
@@ -385,6 +385,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.framework\"";
 				GCC_PREFIX_HEADER = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -513,6 +514,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.framework\"";
 				GCC_PREFIX_HEADER = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
