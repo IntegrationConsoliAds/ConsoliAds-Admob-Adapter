@@ -13,9 +13,3 @@ FOUNDATION_EXPORT double AdmobTestFrameworkVersionNumber;
 
 //! Project version string for AdmobTestFramework.
 FOUNDATION_EXPORT const unsigned char AdmobTestFrameworkVersionString[];
-
-#import <ConsoliAdsAdmobAdapter/CAAdmobInterstitial.h>
-#import <ConsoliAdsAdmobAdapter/CAAdmobStaticInterstitial.h>
-#import <ConsoliAdsAdmobAdapter/CAAdmobRewarded.h>
-#import <ConsoliAdsAdmobAdapter/CAAdmobAppOpenAd.h>
-#import <ConsoliAdsAdmobAdapter/CAAdmobNativeAd.h>

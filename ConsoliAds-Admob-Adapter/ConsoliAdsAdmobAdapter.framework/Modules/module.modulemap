@@ -1,14 +1,6 @@
-framework module AdmobTestFramework {
-  umbrella header "AdmobTestFramework.h"
+framework module ConsoliAdsAdmobAdapter {
+  umbrella header "ConsoliAdsAdmobAdapter.h"
 
   export *
   module * { export * }
-  
-  header "CAAdmobStaticInterstitial.h"
-  header "CAAdmobInterstitial.h"
-  header "CAAdmobAppOpenAd.h"
-  header "CAAdmobBannerAd.h"
-  header "AdmobTestFramework.h"
-  header "CAAdmobRewarded.h"
-  header "CAAdmobNativeAd.h"
 }
