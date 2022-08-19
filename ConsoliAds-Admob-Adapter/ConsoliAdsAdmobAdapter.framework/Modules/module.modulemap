@@ -1,6 +1,0 @@
-framework module ConsoliAdsAdmobAdapter {
-  umbrella header "ConsoliAdsAdmobAdapter.h"
-
-  export *
-  module * { export * }
-}

@@ -11,7 +11,6 @@
 		727A321CA4C1842EDE9C5AB90930ED20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		9382A4225DD5E0322D41685CDE366460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		97AD09510FF218E3B7005B5C8097C257 /* ConsoliAds-Admob-Adapter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D4C922D0FE3657F5C1B3EC2B88E809 /* ConsoliAds-Admob-Adapter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA3D45F9277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3D45F8277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework */; };
 		D5E46BF236B3DB59C561352C46685062 /* Pods-ConsoliAds-Admob-Adapter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B562D00D6FE80A08C6C63E25C10853B /* Pods-ConsoliAds-Admob-Adapter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6B9147331E5A90D61B8AE42062674E9 /* Pods-ConsoliAds-Admob-Adapter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A36075DCB13DEE9A87911284E79A9E3 /* Pods-ConsoliAds-Admob-Adapter_Tests-dummy.m */; };
 		FCE5F9A028AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE5F99F28AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework */; };
@@ -44,7 +43,6 @@
 		9BDCC5F3FFDAA48994B29DD2DE107964 /* Pods-ConsoliAds-Admob-Adapter_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ConsoliAds-Admob-Adapter_Tests"; path = Pods_ConsoliAds_Admob_Adapter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A7D4C922D0FE3657F5C1B3EC2B88E809 /* ConsoliAds-Admob-Adapter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConsoliAds-Admob-Adapter-umbrella.h"; sourceTree = "<group>"; };
-		BA3D45F8277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConsoliAdsAdmobAdapter.framework; path = "ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.framework"; sourceTree = "<group>"; };
 		C1E5B8E163B7215B3DB599120DADB71C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CA4C1FBFDC66C4725096E30E6CE24AC5 /* ConsoliAds-Admob-Adapter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ConsoliAds-Admob-Adapter-Info.plist"; sourceTree = "<group>"; };
 		D4BDD4DB4E25F3E96F39F34F51B84D21 /* Pods-ConsoliAds-Admob-Adapter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ConsoliAds-Admob-Adapter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA3D45F9277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework in Frameworks */,
 				9382A4225DD5E0322D41685CDE366460 /* Foundation.framework in Frameworks */,
 				FCE5F9A028AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework in Frameworks */,
 			);
@@ -175,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				FCE5F99F28AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework */,
-				BA3D45F8277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework */,
 				36C1BA74F67B5BAED9F08484E1594616 /* Pod */,
 				B669F1AFA9F316E70BC97F9226A7DA3F /* Support Files */,
 			);
@@ -383,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F7AECD788C29073AE3C483F57133072 /* ConsoliAds-Admob-Adapter.debug.xcconfig */;
 			buildSettings = {
+				CLANG_MODULES_AUTOLINK = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -391,7 +388,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.framework\"";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.xcframework\"";
 				GCC_PREFIX_HEADER = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -401,6 +398,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter.modulemap";
 				PRODUCT_MODULE_NAME = ConsoliAds_Admob_Adapter;
 				PRODUCT_NAME = ConsoliAds_Admob_Adapter;
@@ -521,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FCEE1004A7D4B5FB0B528806644DE434 /* ConsoliAds-Admob-Adapter.release.xcconfig */;
 			buildSettings = {
+				CLANG_MODULES_AUTOLINK = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -529,7 +528,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.framework\"";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.xcframework\"";
 				GCC_PREFIX_HEADER = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -539,6 +538,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter.modulemap";
 				PRODUCT_MODULE_NAME = ConsoliAds_Admob_Adapter;
 				PRODUCT_NAME = ConsoliAds_Admob_Adapter;

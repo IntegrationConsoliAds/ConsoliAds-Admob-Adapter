@@ -1,6 +1,5 @@
 use_frameworks!
 target 'ConsoliAds-Admob-Adapter_Tests' do
   pod 'ConsoliAds-Admob-Adapter', :path => '../'
-  
-  
+  pod 'ConsoliAds-Mediation', :path => '/Volumes/DataDrive/WorkSpace/CocoaPod Git Repos/ConsoliAds-Mediation/'
 end

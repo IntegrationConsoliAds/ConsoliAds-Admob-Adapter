@@ -29,7 +29,7 @@ DESC
   s.ios.deployment_target = '10.0'
 
   
-  s.vendored_frameworks = 'ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.xcframework'
+  s.vendored_frameworks = 'ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.framework'
   s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC"}
 
   s.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES'}
