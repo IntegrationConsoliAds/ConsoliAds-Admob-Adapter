@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ConsoliAds-Admob-Adapter'
-  s.version          = '8.13.0-1.1.1'
+  s.version          = '8.13.0-1.2'
   s.summary          = 'This pod is used to get admob adapter for admob ad serving after integrating Consoliads-Mediation pod.'
 
 # This description is used to generate tags and improve search results.
