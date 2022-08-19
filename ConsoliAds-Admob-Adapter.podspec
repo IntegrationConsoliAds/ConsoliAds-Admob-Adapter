@@ -27,13 +27,13 @@ DESC
   s.source           = { :git => 'https://github.com/IntegrationConsoliAds/ConsoliAds-Admob-Adapter.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
-
   
-  s.vendored_frameworks = 'ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.framework'
+  
+  s.vendored_frameworks = 'ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.xcframework'
   s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC"}
 
-  s.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES'}
-  s.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES'}
+  s.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES', "MACH_O_TYPE" => "staticlib"}
+  s.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES', "MACH_O_TYPE" => "staticlib"}
 
   s.static_framework = true
 
