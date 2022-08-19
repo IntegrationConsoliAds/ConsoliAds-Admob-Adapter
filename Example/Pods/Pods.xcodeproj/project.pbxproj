@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		BA3D45F9277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3D45F8277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework */; };
 		D5E46BF236B3DB59C561352C46685062 /* Pods-ConsoliAds-Admob-Adapter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B562D00D6FE80A08C6C63E25C10853B /* Pods-ConsoliAds-Admob-Adapter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6B9147331E5A90D61B8AE42062674E9 /* Pods-ConsoliAds-Admob-Adapter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A36075DCB13DEE9A87911284E79A9E3 /* Pods-ConsoliAds-Admob-Adapter_Tests-dummy.m */; };
+		FCE5F9A028AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE5F99F28AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		DC4BFBFD17ED1A8DC33C0D6B455A248D /* ConsoliAds-Admob-Adapter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "ConsoliAds-Admob-Adapter.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DE31CE4AE0FEB519FDEBD6D770DAF007 /* Pods-ConsoliAds-Admob-Adapter_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ConsoliAds-Admob-Adapter_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		EB17B0EDB71C5E096A6B86FBE54EB869 /* ConsoliAds-Admob-Adapter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConsoliAds-Admob-Adapter-prefix.pch"; sourceTree = "<group>"; };
+		FCE5F99F28AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ConsoliAdsAdmobAdapter.xcframework; path = "ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.xcframework"; sourceTree = "<group>"; };
 		FCEE1004A7D4B5FB0B528806644DE434 /* ConsoliAds-Admob-Adapter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ConsoliAds-Admob-Adapter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 			files = (
 				BA3D45F9277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework in Frameworks */,
 				9382A4225DD5E0322D41685CDE366460 /* Foundation.framework in Frameworks */,
+				FCE5F9A028AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +174,7 @@
 		EC6512CEE68F1C55CA3356AB341EA4D2 /* ConsoliAds-Admob-Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				FCE5F99F28AFB67D00B51231 /* ConsoliAdsAdmobAdapter.xcframework */,
 				BA3D45F8277DDE44000E01D9 /* ConsoliAdsAdmobAdapter.framework */,
 				36C1BA74F67B5BAED9F08484E1594616 /* Pod */,
 				B669F1AFA9F316E70BC97F9226A7DA3F /* Support Files */,
@@ -366,8 +370,10 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -390,7 +396,11 @@
 				INFOPLIST_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter.modulemap";
 				PRODUCT_MODULE_NAME = ConsoliAds_Admob_Adapter;
 				PRODUCT_NAME = ConsoliAds_Admob_Adapter;
@@ -420,7 +430,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ConsoliAds-Admob-Adapter_Tests/Pods-ConsoliAds-Admob-Adapter_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ConsoliAds-Admob-Adapter_Tests/Pods-ConsoliAds-Admob-Adapter_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -494,6 +508,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -519,7 +534,11 @@
 				INFOPLIST_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/ConsoliAds-Admob-Adapter/ConsoliAds-Admob-Adapter.modulemap";
 				PRODUCT_MODULE_NAME = ConsoliAds_Admob_Adapter;
 				PRODUCT_NAME = ConsoliAds_Admob_Adapter;
@@ -550,7 +569,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ConsoliAds-Admob-Adapter_Tests/Pods-ConsoliAds-Admob-Adapter_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ConsoliAds-Admob-Adapter_Tests/Pods-ConsoliAds-Admob-Adapter_Tests.modulemap";
 				OTHER_LDFLAGS = "";

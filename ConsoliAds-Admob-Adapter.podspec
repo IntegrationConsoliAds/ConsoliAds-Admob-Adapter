@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ConsoliAds-Admob-Adapter'
-  s.version          = '8.13.0-1.1'
+  s.version          = '8.13.0-1.1.1'
   s.summary          = 'This pod is used to get admob adapter for admob ad serving after integrating Consoliads-Mediation pod.'
 
 # This description is used to generate tags and improve search results.
@@ -26,14 +26,15 @@ DESC
   s.author           = { 'IntegrationConsoliAds' => 'integration@consoliads.com' }
   s.source           = { :git => 'https://github.com/IntegrationConsoliAds/ConsoliAds-Admob-Adapter.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   
-  s.vendored_frameworks = 'ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.framework'
+  s.vendored_frameworks = 'ConsoliAds-Admob-Adapter/ConsoliAdsAdmobAdapter.xcframework'
   s.xcconfig = {"OTHER_LDFLAGS" => "-ObjC"}
 
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES'}
+  s.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES'}
+
   s.static_framework = true
 
 end
